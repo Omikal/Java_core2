@@ -6,7 +6,10 @@ public class Lesson2 {
         int number = 10;
         String newText = text.toLowerCase();
 
+        int clet = text.length();
+
         System.out.println(text);
         System.out.println(newText);
+        System.out.println(clet);
     }
 }
