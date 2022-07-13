@@ -15,5 +15,8 @@ public class HW1_adv {
         double number2 = 5;
         double number3 = Math.pow(number1 + number2 , 2);
         System.out.println(number3);
+
+//      Задание 3
+
     }
 }
