@@ -7,6 +7,7 @@ import java.util.stream.IntStream;
 public class HW1_adv {
     public static void main(String[] args) {
 //      Задание 1
+        System.out.println("Задание 1");
         String num = "234";
         String txt = "some_text";
         int num2 = Integer.parseInt(num);
@@ -15,6 +16,7 @@ public class HW1_adv {
 
 //      Задание 2
 //      Посчитать (a+b)^2 = ?, при a=3, b=5
+        System.out.println("Задание 2");
         double number1 = 3;
         double number2 = 5;
         double number3 = Math.pow(number1 + number2, 2);
@@ -25,7 +27,7 @@ public class HW1_adv {
         // 1,2,5,7,10
         // 2,3,2,17,15
 
-
+        System.out.println("Задание 3");
         int[] a = new int[]{1, 2, 5, 7, 10};
         int[] b = new int[]{2, 3, 2, 17, 15};
         System.out.println(Arrays.toString(a));
@@ -47,6 +49,12 @@ public class HW1_adv {
         }
         for (int i = 0; i < d.length; i++)
             System.out.print(d [i] + " ");
+
+//        В слове "Hello world!" заменить l на r, сделать все буквы заглавными, выбрать первые 8 символов, вывести на экран
+        System.out.println("Задание 4");
+        String world = "Hello world!".replaceAll("l", "r").toUpperCase();
+        world = world.substring(0, 8);
+        System.out.println(world);
     }
 }
 
