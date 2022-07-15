@@ -30,19 +30,23 @@ public class HW1_adv {
         int[] b = new int[]{2, 3, 2, 17, 15};
         System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(b));
-
-        int [] d = new int[a.length + b.length];
+        int[] c = IntStream.range(0, a.length).map(i -> a[i] * b[i]).toArray();
+        int [] d = new int[a.length + b.length + c.length];
         int count = 0;
         for (int i = 0; i < a.length; i++) {
             d [i] = a [i];
             count++;
         }
         for (int j = 0; j < b.length; j++) {
-            d [count++] = b [j];
+            d [count] = b [j];
+            count++;
+        }
+        for (int k = 0; k < c.length; k++) {
+            d [count] = c[k];
+            count++;
         }
         for (int i = 0; i < d.length; i++)
             System.out.print(d [i] + " ");
     }
-
 }
 
