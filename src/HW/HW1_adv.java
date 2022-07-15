@@ -1,6 +1,5 @@
 package HW;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -51,7 +50,7 @@ public class HW1_adv {
             System.out.print(d [i] + " ");
 
 //        В слове "Hello world!" заменить l на r, сделать все буквы заглавными, выбрать первые 8 символов, вывести на экран
-        System.out.println("Задание 4");
+        System.out.println("\nЗадание 4");
         String world = "Hello world!".replaceAll("l", "r").toUpperCase();
         world = world.substring(0, 8);
         System.out.println(world);
