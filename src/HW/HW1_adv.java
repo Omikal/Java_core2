@@ -1,5 +1,9 @@
 package HW;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 public class HW1_adv {
     public static void main(String[] args) {
 //      Задание 1
@@ -7,16 +11,38 @@ public class HW1_adv {
         String txt = "some_text";
         int num2 = Integer.parseInt(num);
         int lng = txt.length();
-        System.out.println(num2+lng);
+        System.out.println(num2 + lng);
 
 //      Задание 2
 //      Посчитать (a+b)^2 = ?, при a=3, b=5
         double number1 = 3;
         double number2 = 5;
-        double number3 = Math.pow(number1 + number2 , 2);
+        double number3 = Math.pow(number1 + number2, 2);
         System.out.println(number3);
 
 //      Задание 3
+//Создать два массив чисел:
+        // 1,2,5,7,10
+        // 2,3,2,17,15
 
+
+        int[] a = new int[]{1, 2, 5, 7, 10};
+        int[] b = new int[]{2, 3, 2, 17, 15};
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
+
+        int [] d = new int[a.length + b.length];
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            d [i] = a [i];
+            count++;
+        }
+        for (int j = 0; j < b.length; j++) {
+            d [count++] = b [j];
+        }
+        for (int i = 0; i < d.length; i++)
+            System.out.print(d [i] + " ");
     }
+
 }
+
