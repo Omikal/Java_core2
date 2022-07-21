@@ -1,6 +1,6 @@
 package HW;
 
-public class HW_4 {
+public class HW_2 {
     public static void main(String[] args) {
 
             // Домашка
