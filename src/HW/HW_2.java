@@ -12,7 +12,7 @@ public class HW_2 {
             }
             // Задание №2
             // Дано:
-            System.out.println();
+            System.out.println("\n");
             int ageChildren = 10;
             // Задача: Написать условную конструкцию, которая в зависимости от возраста ребенка, отправляет его в учебное заведение
             // если ребенку до 6 лет то в сад, если до 11 лет в младшую школу, если до 17 лет в среднюю школу, иначе в университет
@@ -31,9 +31,10 @@ public class HW_2 {
 
         // Задание №3
             // Дано:
-            boolean chicken = true;
-            boolean vegetables = false;
-            boolean sour = true;
+            System.out.println();
+            boolean chicken = false;
+            boolean vegetables = true;
+            boolean sour = false;
             boolean toast = true;
             boolean sausage = true;
             boolean eggs = true;
@@ -45,8 +46,15 @@ public class HW_2 {
             // Написать набор условий, приготовления салатов, по приоритету (от Цезаря к овощному). Либо объявить о невозможности сделать салат.
             // Ожидаемый результат: вывод на экран сделанного салата или объявление о том, что ничего нет.
             // Проверьте работоспособность условий, через изменение значения переменных.
-
-            // Задание №4
+            if ((chicken && vegetables) && (sour && toast)){
+                System.out.println("Я готовлю \"Цезарь\"");
+            } else if ((vegetables && eggs) && (sausage || chicken)) {
+                System.out.println("Я готовлю \"Оливье\"");
+            } else if (vegetables) {
+                System.out.println("Я готовлю \"Овощной салат\"");
+            } else
+                System.out.println("У меня ничего нет");
+        // Задание №4
             // Создать два класса, которые описывают какое либо животное (имеют два атрибута).
             // Написать к ним конструктор, сеттеры, геттеры.
             // Создать экземпляры этих двух животных.
