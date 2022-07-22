@@ -129,9 +129,9 @@ public class HW_2 {
             // Задание №3:
             // Дано:
             boolean hasFuel = true;
-            boolean hasElectricsProblem = false;
+            boolean hasElectricsProblem = true;
             boolean hasMotorProblem = false;
-            boolean hasTransmissionProblem = true;
+            boolean hasTransmissionProblem = false;
             boolean hasWheelsProblem = true;
             // В автосервис приехала сломанная машина. Механики находят неисправность следующим способом:
             // Если у машины нет бензина и ничего не сломано, то отдают машину владельцу и берут 1000 рублей за консультацию.
@@ -145,7 +145,32 @@ public class HW_2 {
             // Ситуации, что бензин есть и ничего не сломано - быть не может.
             // Ожидаемый результат: выведен на экран счет клиенту.
 
-            int price = 0;
+            double price = 0;
+            int br = 0;
+            if (!hasFuel && !hasElectricsProblem && !hasMotorProblem && !hasTransmissionProblem && !hasWheelsProblem) {
+                price = price + 1000;
+            }
+            if (hasElectricsProblem) {
+                price = price + 5_000;
+                br++;
+            }
+            if (hasMotorProblem) {
+                price = price + 10_000;
+                br++;
+            }
+            if (hasTransmissionProblem) {
+                price = price + 4000;
+                br++;
+            }
+            if (hasWheelsProblem) {
+                price = price + 2000;
+                br++;
+            }
+            if (br >= 2 && (hasTransmissionProblem && (hasElectricsProblem || hasMotorProblem))) {
+                price = price * 0.8;
+            } else if (br >= 2) {
+                price = price * 0.9;
+            }
             System.out.println(price);
 
             // Задание №4:
