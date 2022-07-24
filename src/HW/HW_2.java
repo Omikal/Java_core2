@@ -172,6 +172,7 @@ public class HW_2 {
                 price = price * 0.9;
             }
             System.out.println(price);
+            System.out.println();
 
             // Задание №4:
             // Написать систему управления складскими запасами. Создать класс склад, создать класс работники
@@ -186,6 +187,15 @@ public class HW_2 {
                 Worker w1 = new Worker(storage);
                 Worker w2 = new Worker(storage);
                 Worker w3 = new Worker(storage);
+                w1.poteryaPoter();
+                System.out.println(w1.getProductDestroyed());
+                w2.poteryaPoter();
+                w2.poteryaPoter();
+                w2.poteryaPoter();
+                w3.poteryaPoter();
+                System.out.println(w2.getProductDestroyed());
+                System.out.println(w3.getProductDestroyed());
+                System.out.println(storage.getProductCountStorage());
             // Экспертный уровень:
             // Предыстория: Мы находимся в статистическом институте. Хочется понять уровень миграции между регионами за месяц.
             // Для этого было решено произвести анализ передвижения автомобилей: на границе каждого региона стоят камеры,
