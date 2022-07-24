@@ -1,19 +1,10 @@
 package HW;
 
 public class Worker {
-    private static String pref = "Рабочий";
-    private String name;
     private int productDestroyed = 0;
     private Storage storage;
     public Worker(Storage storage) {
         this.storage = storage;
-    }
-    public Worker (String nameWorker, int productDestroyedByWorker) {
-        this.name = nameWorker;
-        this.productDestroyed = productDestroyedByWorker;
-    }
-    public String getNameWorker () {
-        return this.name;
     }
     public int getProductDestroyed () {
         return productDestroyed;
