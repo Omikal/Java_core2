@@ -13,12 +13,14 @@ public class Dog {
         this.color = colorDog;
     }
     public String getDogName () {
+
         return prefixDog + this.name;
     }
     public int getDogAge () {
         return this.age;
     }
     public String getDogSize () {
+
         return this.size;
     }
     public String getDogColor () {
