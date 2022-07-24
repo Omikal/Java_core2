@@ -1,4 +1,4 @@
-package HW;
+package HW_2;
 
 public class Dog {
     private static String prefixDog = "Собака";

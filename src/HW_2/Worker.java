@@ -1,4 +1,4 @@
-package HW;
+package HW_2;
 
 public class Worker {
     private int productDestroyed = 0;

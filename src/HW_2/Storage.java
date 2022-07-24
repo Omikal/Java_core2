@@ -1,4 +1,4 @@
-package HW;
+package HW_2;
 
 public class Storage {
     private static String produсtStorage = "vodka";

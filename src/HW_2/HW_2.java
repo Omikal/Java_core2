@@ -1,6 +1,4 @@
-package HW;
-
-import java.util.Arrays;
+package HW_2;
 
 public class HW_2 {
     public static void main(String[] args) {
