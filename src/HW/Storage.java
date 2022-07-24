@@ -11,5 +11,8 @@ public class Storage {
     public int getProductCountStorage () {
         return productCountStorage;
     }
+    public String getProductStorage () {
+        return produсtStorage;
+    }
 }
 
