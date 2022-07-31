@@ -8,8 +8,10 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Random;
 
-    public class HW3 {
+public class HW3 {
         public static void main(String[] args) throws IOException, URISyntaxException {
             //Базовый уровень
             //Задача №1
@@ -85,8 +87,8 @@ import java.nio.file.Path;
                 }
             }
 
-//        Random random = new Random(1);
-//        random.nextInt(10000);
+            Random random = new Random(1);
+            random.nextInt(10000);
             //Задача №2
             // 1. Создать класс Financial record, с двумя атрибутами: incomes, outcomes (доходы, расходы)
             // 2. Создать в этом классе геттеры, сеттеры и конструктор на все атрибуты
@@ -94,7 +96,13 @@ import java.nio.file.Path;
             // 4. Записать в файл "report.txt" все данные из отчетов.
             // 5. Прочитать файл report.txt, просуммировать все доходы и вывести на экран, тоже самое с расходами
             // Ожидаемый результат: общие доходы - (какое то число), общие расходы - (какое то число)
-
+            financialRecord[] finRec1 = new financialRecord[10];
+            for (int i = 0; i < 10; i++) {
+                finRec1[i] = new financialRecord(random.nextInt(10_000), random.nextInt(10_000));
+            }
+            String path = "C:\\Users\\Skywolf\\Desktop\\Java_core2\\rep.txt";
+            FileWriter repWrite = new FileWriter("C:\\Users\\Skywolf\\Desktop\\Java_core2\\rep.txt");
+            Files.write(path, finRec1);
             //Экспертный уровень
             // Дано: папка, внутри которой находятся файлы, следующего именования - report_01_2012.txt, где 01 - месяц, 2012 - год
             // Внутри файла следующий формат:
