@@ -1,6 +1,8 @@
 package HW3;
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -29,8 +31,20 @@ import java.nio.file.Path;
             // 1. Создать файл "my_first_file.txt". На первой строке написать: "Моя бабушка", на второй: "читает газету жизнь"
             // 2. Прочитать файл, и вывести на экран все слова файла в одну строку
             // Ожидаемый результат: "Моя бабушка читает газету жизнь"
-            String filename = "C:\\"
+            String filename = "C:\\Users\\Skywolf\\Desktop\\Java_core2\\hw3.txt";
             FileWriter fileWriter = new FileWriter(filename);
+            fileWriter.write("Моя бабушка\n");
+            fileWriter.write(" читает газету жизнь");
+            fileWriter.close();
+            FileReader fileReader = new FileReader(filename);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            while (bufferedReader.ready()) {
+                String line = bufferedReader.readLine();
+                line.replace("\n" , " ");
+                System.out.print(line);
+            }
+            fileReader.close();
+            bufferedReader.close();
             //Задача №3
             //Необходимо:
             // 1. Создать класс Financial record, с двумя атрибутами: incomes, outcomes (доходы, расходы)
