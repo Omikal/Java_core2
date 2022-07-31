@@ -101,11 +101,18 @@ public class HW3 {
                 finRec1[i] = new financialRecord(random.nextInt(10_000), random.nextInt(10_000));
             }
             String path = "C:\\Users\\Skywolf\\Desktop\\Java_core2\\rep.txt";
-            FileWriter repWrite = new FileWriter("C:\\Users\\Skywolf\\Desktop\\Java_core2\\rep.txt");
+            FileWriter repWrite = new FileWriter(path);
             for (financialRecord record : finRec1) {
                 repWrite.write(record.result());
             }
             repWrite.close();
+
+            int sumIn;
+            int sumOut;
+            FileReader fileReader2 = new FileReader(path);
+            BufferedReader br = new BufferedReader(fileReader2);
+
+
             //Экспертный уровень
             // Дано: папка, внутри которой находятся файлы, следующего именования - report_01_2012.txt, где 01 - месяц, 2012 - год
             // Внутри файла следующий формат:
