@@ -70,7 +70,7 @@ import java.nio.file.Path;
             // 2. Создать 20 тойот, 20 жигулей с помощью CarFactory, положить их в один массив.
             // 3. Пройтись по массиву, проверить к какому классу принадлежит машина, привести тип к классу машины
             // и вызвать характерные для нее методы.
-            Car[] cars = new Car [];
+            Car[] cars = new Car [40];
             for (int i = 0; i < 20; i++) {
                 cars[i] = CarFactory.makeToyota();
                 cars[i + 20] = CarFactory.makeZhiga();
