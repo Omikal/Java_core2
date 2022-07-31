@@ -19,4 +19,7 @@ public class financialRecord {
     public void setIncomes(int incomes) {
         this.incomes = incomes;
     }
+    public String result() {
+        return this.incomes + " " + this.outcomes;
+    }
 }
