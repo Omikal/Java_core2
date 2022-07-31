@@ -88,7 +88,7 @@ public class HW3 {
             }
 
             Random random = new Random(1);
-            random.nextInt(10000);
+
             //Задача №2
             // 1. Создать класс Financial record, с двумя атрибутами: incomes, outcomes (доходы, расходы)
             // 2. Создать в этом классе геттеры, сеттеры и конструктор на все атрибуты
@@ -102,7 +102,10 @@ public class HW3 {
             }
             String path = "C:\\Users\\Skywolf\\Desktop\\Java_core2\\rep.txt";
             FileWriter repWrite = new FileWriter("C:\\Users\\Skywolf\\Desktop\\Java_core2\\rep.txt");
-            Files.write(path, finRec1);
+            for (financialRecord record : finRec1) {
+                repWrite.write(record.result());
+            }
+            repWrite.close();
             //Экспертный уровень
             // Дано: папка, внутри которой находятся файлы, следующего именования - report_01_2012.txt, где 01 - месяц, 2012 - год
             // Внутри файла следующий формат:
