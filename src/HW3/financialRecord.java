@@ -7,20 +7,15 @@ public class financialRecord {
         this.incomes = finIn;
         this.outcomes = finOut;
     }
-
-
     public int getOutcomes() {
         return outcomes;
     }
-
     public void setOutcomes(int outcomes) {
         this.outcomes = outcomes;
     }
-
     public int getIncomes() {
         return incomes;
     }
-
     public void setIncomes(int incomes) {
         this.incomes = incomes;
     }
