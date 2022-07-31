@@ -1,6 +1,7 @@
 package HW3;
 
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
@@ -28,7 +29,8 @@ import java.nio.file.Path;
             // 1. Создать файл "my_first_file.txt". На первой строке написать: "Моя бабушка", на второй: "читает газету жизнь"
             // 2. Прочитать файл, и вывести на экран все слова файла в одну строку
             // Ожидаемый результат: "Моя бабушка читает газету жизнь"
-
+            String filename = "C:\\"
+            FileWriter fileWriter = new FileWriter(filename);
             //Задача №3
             //Необходимо:
             // 1. Создать класс Financial record, с двумя атрибутами: incomes, outcomes (доходы, расходы)
