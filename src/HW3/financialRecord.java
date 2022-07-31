@@ -20,6 +20,6 @@ public class financialRecord {
         this.incomes = incomes;
     }
     public String result() {
-        return this.incomes + " " + this.outcomes;
+        return this.incomes + ";" + this.outcomes + "\n";
     }
 }
