@@ -20,6 +20,7 @@ import java.nio.file.Path;
             // 2.Создать два класса, которые будут наследоваться от абстрактного класса, и реализовывать особенности этих машин
             // Методы должны просто печатать на экран действия машин (начал движение, включил музыку и тд.)
             // 3. Создать два экземпляра этих классов, и вызвать методы характерные для них
+            System.out.println("Задание 1");
             Toyota toyota = new Toyota("Camry");
             Zhiga zhiga = new Zhiga("devyatka");
             toyota.go();
@@ -31,6 +32,7 @@ import java.nio.file.Path;
             // 1. Создать файл "my_first_file.txt". На первой строке написать: "Моя бабушка", на второй: "читает газету жизнь"
             // 2. Прочитать файл, и вывести на экран все слова файла в одну строку
             // Ожидаемый результат: "Моя бабушка читает газету жизнь"
+            System.out.println("Задание 2");
             String filename = "C:\\Users\\Skywolf\\Desktop\\Java_core2\\hw3.txt";
             FileWriter fileWriter = new FileWriter(filename);
             fileWriter.write("Моя бабушка\n");
@@ -52,6 +54,14 @@ import java.nio.file.Path;
             // 3. Создать объект этого класса прямо здесь (class Homework3, метод main), с доходами 500, расходами 300
             // 4. Записать в файл "report.txt" данные из объекта класса.
             // Ожидаемый результат: в файле report.txt - одна строка: доходы = 500, расходы = 300
+            System.out.println("Задание 3");
+            financialRecord finRec = new financialRecord(0, 0);
+            finRec.setIncomes(500);
+            finRec.setOutcomes(300);
+            String repName = "C:\\Users\\Skywolf\\Desktop\\Java_core2\\report.txt";
+            FileWriter repWriter = new FileWriter(repName);
+            repWriter.write("доходы = " + finRec.getIncomes() + ", расходы = " + finRec.getOutcomes());
+            repWriter.close();
 
             //Продвинутый уровень
             //Задача №1
@@ -60,6 +70,20 @@ import java.nio.file.Path;
             // 2. Создать 20 тойот, 20 жигулей с помощью CarFactory, положить их в один массив.
             // 3. Пройтись по массиву, проверить к какому классу принадлежит машина, привести тип к классу машины
             // и вызвать характерные для нее методы.
+            Car[] cars = new Car [];
+            for (int i = 0; i < 20; i++) {
+                cars[i] = CarFactory.makeToyota();
+                cars[i + 20] = CarFactory.makeZhiga();
+            }
+            for (Car car : cars) {
+                if (car instanceof Toyota) {
+                    Toyota toyota1 = (Toyota) car;
+                    toyota1.music();
+                } else if (car instanceof Zhiga) {
+                    Zhiga zhiga1 = (Zhiga) car;
+                    zhiga1.breakOut();
+                }
+            }
 
 //        Random random = new Random(1);
 //        random.nextInt(10000);
