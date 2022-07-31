@@ -17,7 +17,12 @@ import java.nio.file.Path;
             // 2.Создать два класса, которые будут наследоваться от абстрактного класса, и реализовывать особенности этих машин
             // Методы должны просто печатать на экран действия машин (начал движение, включил музыку и тд.)
             // 3. Создать два экземпляра этих классов, и вызвать методы характерные для них
-
+            Toyota toyota = new Toyota("Camry");
+            Zhiga zhiga = new Zhiga("devyatka");
+            toyota.go();
+            zhiga.light();
+            zhiga.breakOut();
+            toyota.music();
             //Задача №2
             //Необходимо:
             // 1. Создать файл "my_first_file.txt". На первой строке написать: "Моя бабушка", на второй: "читает газету жизнь"
@@ -60,8 +65,8 @@ import java.nio.file.Path;
 
             //Читать файлы нужно через
             //Прочитать все файлы из папки
-            String path1 = "путь до файла";
-            Files.walk(Path.of(path1)).forEach(e -> System.out.println(e.toString()));
+            //       String path1 = "путь до файла";
+            //      Files.walk(Path.of(path1)).forEach(e -> System.out.println(e.toString()));
 
 
             // Задача №1
