@@ -1,4 +1,4 @@
-package HW4_adv;
+package HW4_adv.t1;
 
 public class El extends Tree implements Smellable {
     public El(boolean hasCones) {
