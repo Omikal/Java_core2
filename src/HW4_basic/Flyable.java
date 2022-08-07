@@ -1,4 +1,4 @@
-package HW4;
+package HW4_basic;
 
 public interface Flyable {
     void fly() throws FlyException;

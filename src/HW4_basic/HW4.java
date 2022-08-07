@@ -1,4 +1,4 @@
-package HW4;
+package HW4_basic;
 
 public class HW4 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package HW4;
+package HW4_basic;
 
 public class Duck implements Flyable {
     //isInjured
